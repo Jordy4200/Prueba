@@ -1,0 +1,46 @@
+﻿@model List<Dogs.Models.Dog>
+
+@{
+    ViewData["Title"] = "Lista de Razas de Perros";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Lista de Razas de Perros</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            @foreach (var dog in Model)
+            {
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@dog.Name</h5>
+                            <a href="@Url.Action("Details", "Home", new { id = dog.Id })" class="btn btn-info">Ver más detalles</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <nav aria-label="Page navigation" class="mt-3">
+            <ul class="pagination justify-content-center">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1 })">Anterior</a>
+                    </li>
+                }
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                    </li>
+                }
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1 })">Siguiente</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>
