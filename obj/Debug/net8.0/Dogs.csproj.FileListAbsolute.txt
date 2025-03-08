@@ -35,3 +35,4 @@ C:\Users\jordy\source\repos\Dogs\Dogs\obj\Debug\net8.0\ref\Dogs.dll
 C:\Users\jordy\source\repos\Dogs\Dogs\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\jordy\source\repos\Dogs\Dogs\obj\Debug\net8.0\Dogs.csproj.AssemblyReference.cache
 C:\Users\jordy\source\repos\Dogs\Dogs\obj\Debug\net8.0\Dogs.csproj.Up2Date
+C:\Users\jordy\source\repos\Dogs\Dogs\obj\Debug\net8.0\Dogs.sourcelink.json

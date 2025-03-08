@@ -1,20 +1,19 @@
 ﻿@model Dogs.Models.Dog
-
 @{
     ViewData["Title"] = "Detalles del Perro";
 }
 
 <div class="container mt-5">
     <div class="text-center">
-        <h1 class="display-4">@Model.Name</h1>
-        <div class="card mt-3">
+        <h1 class="display-4 text-primary">@Model.Name</h1>
+        <div class="card shadow-lg mt-4">
             <div class="card-body">
-                <p class="card-text"><strong>Descripción:</strong> @Model.Description</p>
-                <p class="card-text"><strong>Hipoalergénico:</strong> @(Model.Hypoallergenic ? "Sí" : "No")</p>
-                <p class="card-text"><strong>Esperanza de Vida:</strong> @Model.LifeSpanMin - @Model.LifeSpanMax años</p>
-                <p class="card-text"><strong>Peso del Macho:</strong> @Model.MaleWeightMin - @Model.MaleWeightMax kg</p>
-                <p class="card-text"><strong>Peso de la Hembra:</strong> @Model.FemaleWeightMin - @Model.FemaleWeightMax kg</p>
-                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">Regresar a la Lista</a>
+                <p class="card-text"><strong>📜 Descripción:</strong> @Model.Description</p>
+                <p class="card-text"><strong>🌱 Hipoalergénico:</strong> @(Model.Hypoallergenic ? "Sí" : "No")</p>
+                <p class="card-text"><strong>⏳ Esperanza de Vida:</strong> @Model.LifeSpanMin - @Model.LifeSpanMax años</p>
+                <p class="card-text"><strong>⚖️ Peso del Macho:</strong> @Model.MaleWeightMin - @Model.MaleWeightMax kg</p>
+                <p class="card-text"><strong>⚖️ Peso de la Hembra:</strong> @Model.FemaleWeightMin - @Model.FemaleWeightMax kg</p>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">⬅ Regresar a la Lista</a>
             </div>
         </div>
     </div>
